@@ -1,3 +1,8 @@
+<style type="text/css">
+  img{
+    height: 100px;
+  }
+</style>
 <div class="row">
         <!-- left column -->
         <div class="col-md-6">
@@ -8,7 +13,7 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form" action="admin.php?action=edit_product&id=<?php echo $id?>" method="post">
+            <form role="form" action="admin.php?action=edit_product&id=<?php echo $id?>" method="post" enctype="multipart/form-data">
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputName">Name</label>
@@ -16,11 +21,12 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputUsername">Price</label>
-                  <input type="text" class="form-control" placeholder="Enter username" name="price" value="<?php echo $priceEdit;?>">
+                  <input type="text" class="form-control" placeholder="Enter price" name="price" value="<?php echo $priceEdit;?>">
                 </div>
-				<div class="form-group">
+                <img src="dist/img/<?php echo $imageEdit?>">
+                <div class="form-group">
                   <label for="exampleInputFile">Image</label>
-                  <input type="file" id="exampleInputFile" name="image" value="<?php echo $imageName;?>">
+                  <input type="file" id="exampleInputFile" name="image">
                 </div>
               </div>
               <!-- /.box-body -->
